@@ -6,13 +6,15 @@ let mailInserita = prompt('Inserisci la tua E-mail:');
 listaEmail.push(mailInserita);
 console.log(listaEmail);
 
+let mailTrovata = false
 
-for( i=0; i<listaEmail.length-1; i++ ){
-
+for(let i=0; i<listaEmail.length-1; i++ ){
     if( listaEmail[i] == mailInserita ) {
-        alert("la tua e-mail è già registrata");
-    } else {
-        alert("Iscrizione avvenuta con successo");
+    mailTrovata = true
     }
-
+}
+if( mailTrovata == true ) {
+    alert("la tua e-mail è già registrata");
+} else {
+    alert("Iscrizione avvenuta con successo");
 }
